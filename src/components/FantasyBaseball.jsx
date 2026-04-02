@@ -1,88 +1,89 @@
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent } from "/src/components/ui/card";
 
+
 const fantasyTeams = [
   {
-    name: "Tom's Team",
-    teams: ["Los Angeles Dodgers", "Texas Rangers", "Boston Red Sox", "Kansas City Royals", "Detroit Tigers", "Chicago White Sox"],
-  },
-  {
-    name: "All Rise ",
-    teams: ["Los Angeles Dodgers", "San Diego Padres", "Arizona Diamondbacks", "Tampa Bay Rays", "Toronto Blue Jays", "Chicago White Sox"],
-  },
-  {
-    name: "Nice Boyz @ Bat",
-    teams: ["New York Yankees", "Arizona Diamondbacks", "Texas Rangers", "Athletics", "Tampa Bay Rays", "Chicago White Sox"],
-  },
-  {
-    name: "Rum Tum Slugger",
-    teams: ["New York Mets", "Cleveland Guardians", "Chicago Cubs", "Milwaukee Brewers", "Cincinnati Reds", "Colorado Rockies"],
-  },
-  {
-    name: "Cole Story, Bro",
-    teams: ["Los Angeles Dodgers", "Arizona Diamondbacks", "Chicago Cubs", "Detroit Tigers", "Milwaukee Brewers", "Colorado Rockies"],
-  },
-  {
-    name: "The Robo ump is my dad",
-    teams: ["New York Mets", "Boston Red Sox", "Texas Rangers", "Kansas City Royals", "Tampa Bay Rays", "Miami Marlins"],
-  },
-  {
-    name: "Never Order Helmet Nachos",
-    teams: ["Los Angeles Dodgers", "Cleveland Guardians", "San Diego Padres", "Detroit Tigers", "Cincinnati Reds", "Miami Marlins"],
-  },
-  {
-    name: "wildxbaseball10",
-    teams: ["Atlanta Braves", "Houston Astros", "Texas Rangers", "San Francisco Giants", "Cincinnati Reds", "Miami Marlins"],
+    name: "ItsHowYouPlayTheGame",
+    teams: ["Yankees", "Brewers", "Cubs",  "Rays", "Guardians", "Rockies"],
   },
   {
     name: "Carol",
-    teams: ["Atlanta Braves", "Houston Astros", "Minnesota Twins", "Kansas City Royals", "Tampa Bay Rays", "Washington Nationals"],
+    teams: ["Dodgers", "Phillies", "Cubs",  "Reds", "Giants", "Nationals"],
   },
   {
-    name: "Beak Freak",
-    teams: ["Baltimore Orioles", "St. Louis Cardinals", "Toronto Blue Jays", "Los Angeles Angels", "Colorado Rockies", "Chicago White Sox"],
-  },
-  {
-    name: "Beffballs",
-    teams: ["New York Yankees", "San Diego Padres", "Chicago Cubs", "Detroit Tigers", "San Francisco Giants", "Washington Nationals"],
-  },
-  {
-    name: "New Jersey Baseball Team",
-    teams: ["New York Yankees", "Baltimore Orioles", "Toronto Blue Jays", "Cincinnati Reds", "Colorado Rockies", "Miami Marlins"],
-  },
-  {
-    name: "Relief Pitchers 🍺",
-    teams: ["New York Mets", "Boston Red Sox", "San Diego Padres", "Seattle Mariners", "San Francisco Giants", "Los Angeles Angels"],
-  },
-  {
-    name: "Ryan S",
-    teams: ["Atlanta Braves", "Philadelphia Phillies", "Minnesota Twins", "Seattle Mariners", "San Francisco Giants", "Los Angeles Angels"],
-  },  {
-    name: "Jobu Needs a Refill",
-    teams: ["Philadelphia Phillies", "Baltimore Orioles", "Cleveland Guardians", "Kansas City Royals", "Washington Nationals", "Pittsburgh Pirates"],
-  },
-  {
-    name: "Boston Tea Party",
-    teams: ["Philadelphia Phillies", "Arizona Diamondbacks", "Seattle Mariners", "Milwaukee Brewers", "Athletics", "Pittsburgh Pirates"],
-  },
-  {
-    name: "Woody Harrelson's Hash Pipe",
-    teams: ["Houston Astros", "Boston Red Sox", "Cleveland Guardians", "Minnesota Twins", "St. Louis Cardinals", "Pittsburgh Pirates"],
-  },
-  {
-    name: "bulldogs",
-    teams: ["New York Yankees", "Houston Astros", "St. Louis Cardinals", "Toronto Blue Jays", "Athletics", "Los Angeles Angels"],
+    name: "All Rise",
+    teams: ["Dodgers", "Cubs", "Brewers",  "Guardians", "Reds", "Rockies"],
   },
   {
     name: "NECB",
-    teams: ["Philadelphia Phillies", "Baltimore Orioles", "Milwaukee Brewers", "Chicago Cubs", "Athletics", "Washington Nationals"],
+    teams: ["Dodgers", "Phillies", "Tigers",  "Royals", "Reds", "Nationals"],
+  },
+  {
+    name: "Boston Tea Party",
+    teams: ["Dodgers", "Phillies", "Tigers",  "Padres", "Reds", "Nationals"],
+  },
+  {
+    name: "Beffballs",
+    teams: ["Mariners", "Braves", "Padres",  "Giants", "Rays", "Nationals"],
+  },
+  {
+    name: "Never Order Helmet Nachos",
+    teams: ["Yankees", "Tigers", "Guardians",  "Royals", "Cardinals", "Rockies"],
   },
   {
     name: "The Good Team",
-    teams: ["New York Mets", "Atlanta Braves", "Minnesota Twins", "Seattle Mariners", "St. Louis Cardinals", "Pittsburgh Pirates"],
+    teams: ["Mariners", "Cubs", "Diamondbacks",  "Angels", "Pirates", "White Sox"],
+  },
+  {
+    name: "Woody Harrelson\'s Hash Pipe",
+    teams: ["Yankees", "Red Sox", "Orioles",  "Rangers", "Pirates", "White Sox"],
+  },
+  {
+    name: "Pitch Don’t Kill My Vibe",
+    teams: ["Mets", "Braves", "Brewers",  "Giants", "Pirates", "Cardinals"],
+  },
+  {
+    name: "wildxbaseball10",
+    teams: ["Yankees", "Red Sox", "Orioles",  "Astros", "Pirates", "Marlins"],
+  },
+  {
+    name: "Tom's Team",
+    teams: ["Braves", "Orioles", "Astros",  "Rangers", "Twins", "Angels"],
+  },
+  {
+    name: "Beak Freak",
+    teams: ["Blue Jays", "Orioles", "Rays",  "Angels", "Cardinals", "Rockies"],
+  },
+  {
+    name: "Jobu Needs a Refill",
+    teams: ["Blue Jays", "Phillies", "Royals",  "Padres", "Athletics", "Marlins"],
+  },  {
+    name: "Relief Pitchers 🍺",
+    teams: ["Mets", "Tigers", "Padres",  "Giants", "Athletics", "Twins"],
+  },
+  {
+    name: "Ryan S",
+    teams: ["Mariners", "Red Sox", "Astros",  "Rangers", "Athletics", "Twins"],
+  },
+  {
+    name: "bulldogs",
+    teams: ["Mets", "Braves", "Diamondbacks",  "White Sox", "Angels", "Marlins"],
+  },
+  {
+    name: "Nice Boyz in the Outfield",
+    teams: ["Brewers", "Red Sox", "Diamondbacks",  "Guardians", "White Sox", "Twins"],
+  },
+  {
+    name: "Rum Tum Slugger",
+    teams: ["Blue Jays", "Royals", "Diamondbacks", "Marlins", "Cardinals", "Mets"],
+  },
+  {
+    name: "The Robo ump is my dad",
+    teams: ["Mariners", "Blue Jays", "Astros",  "Rangers", "Athletics", "Rays"],
   },
 
-  // Add the rest of your fantasy teams here...
+
 ];
 
 export default function FantasyBaseball() {
@@ -117,7 +118,7 @@ export default function FantasyBaseball() {
   useEffect(() => {
     async function fetchTeamStats() {
       try {
-        const res = await fetch("https://statsapi.mlb.com/api/v1/teams/stats?season=2025&stats=season&group=hitting&sortStat=stolenBases&sportIds=1");
+        const res = await fetch("https://statsapi.mlb.com/api/v1/teams/stats?season=2026&stats=season&group=hitting&sortStat=stolenBases&sportIds=1");
         const data = await res.json();
         
         console.log("Team Stats API Response:", data); // Debugging line
