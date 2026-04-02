@@ -78,7 +78,7 @@ const fantasyTeams = [
     teams: ["Philadelphia Phillies", "Baltimore Orioles", "Milwaukee Brewers", "Chicago Cubs", "Athletics", "Washington Nationals"],
   },
   {
-    name: "The Disco Mushrooms",
+    name: "The Good Team",
     teams: ["New York Mets", "Atlanta Braves", "Minnesota Twins", "Seattle Mariners", "St. Louis Cardinals", "Pittsburgh Pirates"],
   },
 
